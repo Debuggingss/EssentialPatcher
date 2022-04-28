@@ -19,3 +19,5 @@ find_package(JVMTI)
 
 target_include_directories(EssentialPatcher PUBLIC ${JNI_INCLUDE_DIRS} ${JVMTI_INCLUDE_DIRS})
 target_link_libraries(EssentialPatcher ${JNI_LIBRARIES} ${JVMTI_LIBRARIES})
+
+set(CMAKE_SHARED_LINKER_FLAGS "-static")
